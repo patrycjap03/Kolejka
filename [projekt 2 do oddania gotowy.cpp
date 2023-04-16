@@ -70,7 +70,7 @@ public:
             }
             else {
                 for (auto c : track_str) {
-                    track.push(c);// funkcja ponownie wstawia elementy toru z powrotem do kolejki (track.push(c)).
+                    track.push(c);// funkcja ponownie wstawia elementy toru z powrotem do kolejki .
                 }
             }
         }
@@ -121,8 +121,8 @@ public:
 
 class TrainController {
 public:
-    TrainController(int num_tracks, int track_length, const std::string track_names[])// Konstruktor przyjmuje trzy parametry: liczbę torów, długość toru i nazwy torów
-        : m_numTracks(num_tracks), m_trackLength(track_length), m_trackNames(track_names) {}//przypisuje je do odpowiednich pól prywatnych (m_numTracks, m_trackLength i m_trackNames) za pomocą listy inicjalizacyjnej. 
+    TrainController(int num_tracks, int track_length, const std::string track_names[])// Konstruktor przyjmuje trzy parametry
+        : m_numTracks(num_tracks), m_trackLength(track_length), m_trackNames(track_names) {}//przypisuje je do odpowiednich pól prywatnych za pomocą listy inicjalizacyjnej. 
    
     void run() {
         // maksymalna liczba wagonów na torze
@@ -167,7 +167,7 @@ int main() {
     const int TRACK_CAPACITY = 10;
     const std::string TRACK_NAMES[NUM_TRACKS] = { "[AABB] Tor 1", "[ABAB] Tor 2", "[CDDC] Tor 3", "[DCCA] Tor 4", "[BCBA] Tor 5" };
 
-    TrainController trainController(NUM_TRACKS, 10, TRACK_NAMES);// obiekt TrainController z wykorzystaniem konstruktora klasy i przekazanych mu argumentów: liczby torów, długości toru oraz tablicy z nazwami torów
+    TrainController trainController(NUM_TRACKS, 10, TRACK_NAMES);
     trainController.run();
 
     return 0;
